@@ -1,0 +1,125 @@
+.contact {
+  background: $secondaryColor;
+  background-size: cover;
+  background-position: bottom center;
+  color: $secondaryTextColor;
+  padding: 50px 0;
+}
+
+.contact__info {
+  width: calc(40% - 20px);
+
+  @media (max-width: 769px) {
+    width: 100%;
+  }
+
+  h3 {
+    margin: 15px 0;
+  }
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+.contact__social {
+  justify-content: flex-start;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+
+  li {
+    margin: 20px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    @media (max-width: 1000px) {
+      margin: 15px;
+    }
+
+    @media (max-width: 769px) {
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  a {
+    color: $accentColor;
+
+    &:hover,
+    &:focus {
+      color: $primaryColor;
+    }
+  }
+
+  i {
+    font-size: 4rem;
+
+    @media (max-width: 890px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 769px) {
+      font-size: calc(4rem - 1vw);
+    }
+  }
+}
+
+form {
+  align-self: flex-start;
+  width: calc(60% - 20px);
+
+  @media (max-width: 769px) {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  button {
+    margin: 15px auto;
+
+    background-color: $primaryColor;
+    padding: 10px 20px;
+    border: 0;
+    font-family: $headerFont;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: $secondaryTextColor;
+    box-shadow: 5px 5px 0 $accentColor;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.3s all;
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+      background-color: $accentColor;
+      box-shadow: none;
+      top: 5px;
+      left: 5px;
+    }
+
+    @media (max-width: 480px) {
+      width: calc(100% - 5px);
+      position: relative;
+      left: -5px;
+    }
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  border: 3px solid $white;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $primaryColor;
+  }
+}
